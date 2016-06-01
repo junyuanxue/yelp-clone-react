@@ -1,3 +1,5 @@
+require('babel-register');
+
 const NODE_ENV = process.env.NODE_ENV;
 const dotenv = require('dotenv');
 
@@ -101,6 +103,27 @@ config.resolve.alias = {
   'components': join(src, 'components'),
   'utils': join(src, 'utils'),
   'styles': join(src, 'styles')
+}
+
+// Testing
+if (isTest) {
+  config.externals = {
+    'react/lib/ReactContext': true,
+    'react/lib/ExecutionEnvironment': true,
+  }
+  config.module.noParse = /\/sinon\.js/;
+  config.resolve.alias['sinon'] = 'sinon/pkg/sinon';
+
+  config.plugins = config.plugins.filter(p => {
+    const name = p.constructor.toString();
+    const fnName = name.match(/^function (.*)\((.*\))/)
+
+    const idx = [
+      'DedupePlugin',
+      'UglifyJsPlugin'
+    ].indexOf(fnName[1]);
+    return idx < 0;
+  })
 }
 
 
