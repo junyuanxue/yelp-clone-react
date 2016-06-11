@@ -2,12 +2,28 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
 
-import 'font-awesome/css/font-awesome.css';
-import styles from './styles.module.css';
+// import 'font-awesome/css/font-awesome.css';
+// import styles from './styles.module.css';
 
 class App extends React.Component {
+  static propTypes = {
+    routes: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
+
+  // class getter
+  content() {
+    return (<Router
+      routes={this.props.routes}
+      hisory={this.props.history} />)
+  }
+
   render() {
-    return (<div>Content</div>)
+    return (
+      <div style={{ height: '100%' }}>
+        {this.content}
+      </div>
+    )
   }
 }
 
