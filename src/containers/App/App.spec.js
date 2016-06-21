@@ -15,4 +15,4 @@ describe('<App />', () => {
     expect(wrapper.find('Router'))
       .to.have.length(1);
   });
-});
+})
