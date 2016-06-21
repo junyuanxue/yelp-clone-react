@@ -5,6 +5,7 @@ import {searchNearby} from 'utils/googleApiHelpers'
 import styles from './styles.module.css'
 
 import Header from 'components/Header/Header'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 export class Container extends React.Component {
   constructor(props) {
@@ -39,9 +40,12 @@ export class Container extends React.Component {
         <GoogleMap
           onReady={this.onReady.bind(this)}
           google={this.props.google}
-          visible={false}
-          className={styles.wrapper}>
+          className={styles.wrapper}
+          visible={false}>
           <Header />
+          <Sidebar
+            title={'Restaurants'}
+            places={this.state.places} />
           <div className={styles.content}>
             {this.state.places.map(place => {
               return (
