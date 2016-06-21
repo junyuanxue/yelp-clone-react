@@ -1,9 +1,6 @@
-import React, { PropTypes } from 'react';
-import ReactDOM from 'react-dom';
-import { Router } from 'react-router';
-
-// import 'font-awesome/css/font-awesome.css';
-// import styles from './styles.module.css';
+import React, { PropTypes } from 'react'
+import ReactDOM from 'react-dom'
+import { Router } from 'react-router'
 
 class App extends React.Component {
   static propTypes = {
@@ -12,7 +9,7 @@ class App extends React.Component {
   }
 
   // class getter
-  content() {
+  get content() {
     return (<Router
       routes={this.props.routes}
       hisory={this.props.history} />)
@@ -26,18 +23,5 @@ class App extends React.Component {
     )
   }
 }
-
-// const App = React.createClass({
-//   render: function() {
-//     return (
-//       <div className={styles.wrapper}>
-//         <h1>
-//           <i className="fa fa-star"></i>
-//           Environment: {__NODE_ENV__}
-//         </h1>
-//       </div>
-//     )
-//   }
-// });
 
 module.exports = App;
