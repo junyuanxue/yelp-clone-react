@@ -14,7 +14,8 @@ describe('<Header />', () => {
     expect(wrapper.find('h1').first().text())
       .to.equal('Yelp')
   });
-  it('contains a section menu with the title', () => {
+
+  it('contains a section title', () => {
     expect(wrapper.find('section').first().text())
       .to.equal('Discover cool spots nearby')
   });
