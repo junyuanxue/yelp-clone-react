@@ -1,4 +1,4 @@
-import React, { PropTypes as T } form 'react'
+import React, { PropTypes as T } from 'react'
 import classnames from 'classnames'
 
 import Item from './Item'

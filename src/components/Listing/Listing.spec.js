@@ -8,9 +8,9 @@ import styles from './styles.module.css'
 describe('<Listing />', () => {
   let wrapper;
   const places = [{
-    name: 'Chicago'
+    name: 'The Missing Bean'
   }, {
-    name: 'San Francisco'
+    name: 'Turl Street Kitchen'
   }];
 
   beforeEach(() => {
@@ -21,10 +21,11 @@ describe('<Listing />', () => {
 
   it('wraps the component in a listing css class', () => {
     expect(wrapper.find('.${styles.container}'))
-      .to.be.defined;
+      .to.be.defined
   });
+
   it('has an item for each place in the places prop', () => {
     expect(wrapper.find('Item').length)
-      .to.equal(places.length);
+      .to.equal(places.length)
   });
 })

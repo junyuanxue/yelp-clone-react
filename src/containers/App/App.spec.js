@@ -7,6 +7,7 @@ import styles from './styles.module.css'
 
 describe('<App />', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(<App />);
   });

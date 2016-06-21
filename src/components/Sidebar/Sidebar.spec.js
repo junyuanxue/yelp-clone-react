@@ -7,6 +7,7 @@ import styles from './styles.module.css'
 
 describe('<Sidebar />', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(<Sidebar title={'Restaurants'} />)
   });
