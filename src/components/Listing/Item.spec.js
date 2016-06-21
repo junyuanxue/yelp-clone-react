@@ -21,7 +21,7 @@ describe('<Item />', () => {
   });
 
   it('wraps the component with an .item css class', () => {
-    expect(wrapper.find('.${styles.item}'))
+    expect(wrapper.find(`.${styles.item}`))
       .to.have.length(1)
   });
 

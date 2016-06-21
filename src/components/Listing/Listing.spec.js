@@ -20,7 +20,7 @@ describe('<Listing />', () => {
   });
 
   it('wraps the component in a listing css class', () => {
-    expect(wrapper.find('.${styles.container}'))
+    expect(wrapper.find(`.${styles.container}`))
       .to.be.defined
   });
 
