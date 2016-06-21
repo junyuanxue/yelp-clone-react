@@ -5,6 +5,7 @@
   top: var(--topbar-height);
   left: 0;
   overflow: scroll;
+  min-width: 400px;
 
   position: relative;
   flex: 1;
