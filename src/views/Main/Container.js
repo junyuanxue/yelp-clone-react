@@ -74,7 +74,7 @@ export class Container extends React.Component {
 }
 
 Container.contextTypes = {
-  router: React.PropTytpes.object
+  router: React.PropTypes.object
 }
 
 export default GoogleApiWrapper({
