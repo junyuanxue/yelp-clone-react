@@ -47,6 +47,7 @@ export class Container extends React.Component {
         this.props.children,
         {
           google: this.props.google,
+          map: this.props.map,
           places: this.state.places,
           loaded: this.props.loaded,
           onMarkerClick: this.onMarkerClick.bind(this)

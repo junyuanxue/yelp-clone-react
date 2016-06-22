@@ -15,6 +15,7 @@ export class Map extends React.Component {
                 key={place.id}
                 name={place.id}
                 place={place}
+                map={this.props.map}
                 onClick={this.props.onMarkerClick.bind(this)}
                 position={place.geometry.location} />
     })
@@ -23,6 +24,7 @@ export class Map extends React.Component {
   render() {
     return (
       <GoogleMap
+        map={this.props.map}
         center={this.props.center}
         google={this.props.google}
         className={styles.map} >
