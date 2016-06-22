@@ -14,7 +14,10 @@ export class Detail extends React.Component {
   }
 
   componentDidMount() {
+    console.log('component did mount')
+    console.log(this.props.map)
     if (this.props.map) {
+      console.log('about to get details')
       this.getDetails(this.props.map)
     }
   }
@@ -32,7 +35,7 @@ export class Detail extends React.Component {
     const {placeId} = params
 
     this.setState({loading: true}, () => {
-      getDeailts(google, map, placeId)
+      getDetails(google, map, placeId)
         .then(place => {
           const {location} = place.geometry
           const loc = {
