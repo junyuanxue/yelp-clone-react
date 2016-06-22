@@ -15,6 +15,7 @@ export class Map extends React.Component {
                 key={place.id}
                 name={place.id}
                 place={place}
+                onClick={this.props.onMarkerClick.bind(this)}
                 position={place.geometry.location} />
     })
   }
